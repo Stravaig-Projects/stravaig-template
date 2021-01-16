@@ -1,4 +1,4 @@
-name: Stravaig Configuration Diagnostics
+name: Stravaig PROJECT NAME HERE
 on: 
   push:
     branches: 
@@ -68,7 +68,7 @@ jobs:
       - uses: actions/setup-dotnet@v1
         name: Setup .NET Core
         with:
-          dotnet-version: 3.1.405
+          dotnet-version: 3.1.x 
 
       - name: Build Solution
         run: dotnet build $STRAVAIG_SOLUTION --configuration Release
