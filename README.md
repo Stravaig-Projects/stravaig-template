@@ -37,7 +37,7 @@ This should be added to the main `.csproj` file:
         <Copyright>©2020-$(StravaigCopyrightYear) Stravaig Projects. See licence for more information.</Copyright>
         <PackageProjectUrl>https://github.com/$(GITHUB_REPOSITORY)/blob/$(StravaigGitHubCommit)/README.md</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <RepositoryUrl>https://github.com/Stravaig-Projects/XXXX</RepositoryUrl>
+        <RepositoryUrl>https://github.com/$(GITHUB_REPOSITORY)</RepositoryUrl>
         <PackageIcon>stravaig-icon.png</PackageIcon>
         <PackageTags>XXXX</PackageTags>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
