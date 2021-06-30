@@ -30,7 +30,6 @@ This should be added to the main `.csproj` file:
     </PropertyGroup>
 
     <PropertyGroup>
-        <YEAR>$([System.DateTime]::Now.Year)</YEAR>
         <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
         <Title>Stravaig XXXX</Title>
         <Authors>Colin Angus Mackay</Authors>
