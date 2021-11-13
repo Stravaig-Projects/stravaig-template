@@ -2,7 +2,9 @@
 
 ## TO DO
 
-When starting with this template the following needs to be updated:
+First install the githooks, ensure powershell 7.x is installed and then run `Install-GitHooks.ps1`. Any work perfomed in feature branches must have a related _issue_ associated with them. The branch name will have to be prefixed with the issue number, followed by a slash then the branch name. (e.g. `#123/my-feature-branch`)
+
+The following then needs to be updated:
 
 * Rename files:
   * Rename file `/src/Stravaig.XXXX.sln` (XXXX = name of the solution within the `Stravaig` namespace)
@@ -58,3 +60,12 @@ Release notes at: $(StravaigReleaseNotes)
 ```
 
 Any part with `XXXX` should be replaced with appropriate information.
+
+---
+
+## Contributing / Getting Started
+
+* Ensure you have PowerShell 7.1.x or higher installed
+* At a PowerShell prompt
+    * Navigate to the root of this repository
+    * Run `./Install-GitHooks.ps1`
