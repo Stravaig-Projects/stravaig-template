@@ -2,7 +2,7 @@
 
 ## TO DO
 
-First install the githooks, ensure powershell 7.x is installed and then run `Install-GitHooks.ps1`. Any work perfomed in feature branches must have a related _issue_ associated with them. The branch name will have to be prefixed with the issue number, followed by a slash then the branch name. (e.g. `#123/my-feature-branch`)
+First install the githooks, ensure powershell 7.x is installed and then run `Install-GitHooks.ps1` (PowerShell 7.2 won't work Windows https://github.com/PowerShell/PowerShell/issues/16480). Any work perfomed in feature branches must have a related _issue_ associated with them. The branch name will have to be prefixed with the issue number, followed by a slash then the branch name. (e.g. `#123/my-feature-branch`)
 
 The following then needs to be updated:
 
