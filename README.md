@@ -24,32 +24,35 @@ This should be added to the main `.csproj` file:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <StravaigBuildTime>$([System.DateTime]::Now.ToString("dddd, d MMMM yyyy 'at' HH:mm:ss zzzz"))</StravaigBuildTime>
-        <StravaigCopyrightYear>$([System.DateTime]::Now.ToString("yyyy"))</StravaigCopyrightYear>
-        <StravaigGitHubCommit>$(GITHUB_SHA)</StravaigGitHubCommit>
-        <StravaigWorkflowUrl>$(GITHUB_SERVER_URL)/$(GITHUB_REPOSITORY)/actions/runs/$(GITHUB_RUN_ID)</StravaigWorkflowUrl>
-        <StravaigReleaseNotes>https://github.com/$(GITHUB_REPOSITORY)/releases/tag/$(STRAVAIG_RELEASE_TAG)</StravaigReleaseNotes>
-    </PropertyGroup>
+  <PropertyGroup>
+    <StravaigBuildTime>$([System.DateTime]::Now.ToString("dddd, d MMMM yyyy 'at' HH:mm:ss zzzz"))</StravaigBuildTime>
+    <StravaigCopyrightYear>$([System.DateTime]::Now.ToString("yyyy"))</StravaigCopyrightYear>
+    <StravaigGitHubCommit>$(GITHUB_SHA)</StravaigGitHubCommit>
+    <StravaigWorkflowUrl>$(GITHUB_SERVER_URL)/$(GITHUB_REPOSITORY)/actions/runs/$(GITHUB_RUN_ID)</StravaigWorkflowUrl>
+    <StravaigReleaseNotes>https://github.com/$(GITHUB_REPOSITORY)/releases/tag/$(STRAVAIG_RELEASE_TAG)</StravaigReleaseNotes>
+  </PropertyGroup>
 
-    <PropertyGroup>
-        <TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
-        <Title>Stravaig XXXX</Title>
-        <Authors>Colin Angus Mackay</Authors>
-        <Copyright>©2020-$(StravaigCopyrightYear) Stravaig Projects. See licence for more information.</Copyright>
-        <PackageProjectUrl>https://github.com/$(GITHUB_REPOSITORY)/blob/$(StravaigGitHubCommit)/README.md</PackageProjectUrl>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <RepositoryUrl>https://github.com/$(GITHUB_REPOSITORY)</RepositoryUrl>
-        <PackageIcon>stravaig-icon.png</PackageIcon>
-        <PackageTags>XXXX</PackageTags>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Description>XXXX.
-        
-Built on $(StravaigBuildTime).
-Build run details at: $(StravaigWorkflowUrl)
-Release notes at: $(StravaigReleaseNotes)
-        </Description>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <Title>Stravaig XXXX</Title>
+    <Authors>Colin Angus Mackay</Authors>
+    <Copyright>©$(StravaigCopyrightYear) Stravaig Projects. See licence for more information.</Copyright>
+    <PackageProjectUrl>https://github.com/$(GITHUB_REPOSITORY)/blob/$(StravaigGitHubCommit)/README.md</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/$(GITHUB_REPOSITORY)</RepositoryUrl>
+    <PackageIcon>stravaig-icon.png</PackageIcon>
+    <PackageTags>XXXX</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>XXXX.
+
+    Built on $(StravaigBuildTime).
+    Build run details at: $(StravaigWorkflowUrl)
+    Release notes at: $(StravaigReleaseNotes)
+    </Description>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>11</LangVersion>
+  </PropertyGroup>
 
     <ItemGroup>
         <None Include="stravaig-icon.png" Pack="true" PackagePath="/" />
