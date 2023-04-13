@@ -44,7 +44,7 @@ jobs:
     
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -65,10 +65,12 @@ jobs:
           echo "Is Preview: $STRAVAIG_IS_PREVIEW"
           echo "Is Stable: $STRAVAIG_IS_STABLE"
           
-      - uses: actions/setup-dotnet@v1
-        name: Setup .NET 6.0 (LTS)
+      - uses: actions/setup-dotnet@v3
+        name: Setup .NET 6.0 and 7.0
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: |
+            6.0.x
+            7.0.x
 
       - name: Build Solution
         run: dotnet build $STRAVAIG_SOLUTION --configuration Release
@@ -104,7 +106,7 @@ jobs:
 
       - name: Archive Simulated Release Information
         if: ${{ env.STRAVAIG_PUBLISH_TO_NUGET == 'false' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: simulated-release-information
           path: |
@@ -116,7 +118,7 @@ jobs:
 
       - name: Archive Release Notes
         if: ${{ env.STRAVAIG_PUBLISH_TO_NUGET == 'true' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: release-information
           path: |
