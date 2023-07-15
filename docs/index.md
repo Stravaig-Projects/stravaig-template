@@ -1,6 +1,6 @@
 # Documentation
 
-* [link](actual-docs/index.md)
+* [link](docs/index.md)
 
 ## Project details
 

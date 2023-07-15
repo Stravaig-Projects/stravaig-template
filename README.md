@@ -4,6 +4,10 @@
 
 First install the githooks, ensure powershell 7.x is installed and then run `Install-GitHooks.ps1` (PowerShell 7.2 won't work Windows https://github.com/PowerShell/PowerShell/issues/16480). Any work perfomed in feature branches must have a related _issue_ associated with them. The branch name will have to be prefixed with the issue number, followed by a slash then the branch name. (e.g. `#123/my-feature-branch`)
 
+* Configure the repository
+  * Give this repo access to the deployment secrets. Organisation --> Settings --> Secrets and variables --> Actions
+  * Set up GitHub Pages: Repository --> Settings --> Pages
+
 The following then needs to be updated:
 
 * Rename files:
@@ -17,6 +21,12 @@ The following then needs to be updated:
 * Update the `.github/workflows/build.yml` file with
   * The name of the project (line 1)
   * The environment variables in `jobs` \ `build` \ `env` to point to the new solution project and tests
+* Update the `.github/workflows/gh-pages.yml` file with:
+  *   
+* Update the `.devcontainer.json` file:
+  * `name` should reflect the name of the docs
+  * `portAttributes` should be set to a non-conflicting port and the label should reflect the repo.
+  * `remoteEnv` should mirror the port set earlier, and the repo name should be updated.
 
 ## Package Details
 
