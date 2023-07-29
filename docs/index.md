@@ -1,6 +1,6 @@
 ---
 layout: default
-title: TODO: Update this page title
+title: TODO - Update this page title
 ---
 
 # Documentation
