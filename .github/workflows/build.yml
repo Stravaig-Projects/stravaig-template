@@ -66,11 +66,12 @@ jobs:
           echo "Is Stable: $STRAVAIG_IS_STABLE"
           
       - uses: actions/setup-dotnet@v3
-        name: Setup .NET 6.0 and 7.0
+        name: Setup .NET 8, 9 and 10.0
         with:
           dotnet-version: |
-            6.0.x
-            7.0.x
+            8.0.x
+            9.0.x
+            10.0.x
             
       - name: .NET State 
         run: dotnet --info 
