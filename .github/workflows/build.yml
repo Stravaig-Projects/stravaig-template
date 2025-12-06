@@ -43,6 +43,10 @@ jobs:
       STRAVAIG_PROJECT: XXXX
     
     steps:
+      - name: Set Time Zone to Europe/London
+        shell: pwsh
+        run: sudo timedatectl set-timezone "Europe/London"
+
       - name: Check out code
         uses: actions/checkout@v3
         with:
@@ -50,7 +54,7 @@ jobs:
 
       - name: Set version number
         shell: pwsh
-        run: ./Set-Version.ps1 -IsPublic "${{ github.event.inputs.isPublic }}" -IsPreview "${{ github.event.inputs.isPreview }}"
+        run: ./Set-Version.ps1
 
       - name: Display workflow state
         run: |
