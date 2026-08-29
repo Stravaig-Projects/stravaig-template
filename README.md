@@ -61,7 +61,7 @@ This should be added to the main `.csproj` file:
     </Description>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <LangVersion>11</LangVersion>
+    <LangVersion>14</LangVersion>
   </PropertyGroup>
 
     <ItemGroup>
