@@ -43,7 +43,7 @@ This should be added to the main `.csproj` file:
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <Title>Stravaig XXXX</Title>
     <Authors>Colin Angus Mackay</Authors>
     <Copyright>©$(StravaigCopyrightYear) Stravaig Projects. See licence for more information.</Copyright>
